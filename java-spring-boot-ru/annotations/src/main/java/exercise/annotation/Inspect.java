@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 // BEGIN
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 public @interface Inspect {
 }
 // END
