@@ -9,17 +9,16 @@ public class Application {
         var address = new Address("London", 12345678);
 
         // BEGIN
-        var service = new SomeService();
 
         // Итерируем все методы класса
-        for (Method method : SomeService.class.getDeclaredMethods()) {
+        for (Method method : address.class.getDeclaredMethods()) {
 
             // Проверяем, есть ли у метода аннотация @Inspect
             if (method.isAnnotationPresent(Inspect.class)) {
 
                 try {
                     // Выполняем метод с аннотацией Inspect
-                    method.invoke(service);
+                    method.invoke(address);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
